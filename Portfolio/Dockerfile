@@ -21,4 +21,4 @@ RUN a2dissite 000-default.conf
 RUN a2enmod rewrite
 EXPOSE 80
 
-CMD /usr/sbin/service apache2 start & bash
+CMD /usr/sbin/service apache2 start && /bin/bash

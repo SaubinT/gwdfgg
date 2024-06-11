@@ -1,3 +1,3 @@
 docker build -t serv_portfo C:\\Users\\asusr\\Documents\\SAE203\\Portfolio
-docker run -itd --name Portfolio_SAUBIN -p 82:80 --restart always serv_portfo
+docker run --name Portfolio_SAUBIN -p 82:80 -tid serv_portfo7
 start http://localhost:82
