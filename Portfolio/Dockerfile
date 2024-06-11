@@ -19,6 +19,7 @@ COPY site.conf /etc/apache2/sites-available/site.conf
 RUN a2ensite site.conf
 RUN a2dissite 000-default.conf
 RUN a2enmod rewrite
+RUN service apache2 restart
 EXPOSE 80
 
 CMD /usr/sbin/service apache2 start && /bin/bash
