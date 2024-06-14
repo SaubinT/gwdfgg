@@ -9,7 +9,7 @@ docker exec -t -i Mariadb /bin/bash
 docker exec -t mariadb apt update
 #fais les MAJ faire attention au - y pour yes
 docker exec -t mariadb apt ugrade -y
-#instal des packet pour la commande ping
+#installe des packet pour la commande ping
 docker exec -t mariadb apt install iputils-ping
 docker exec -t mariadb exit
 #on quitte le bash puis on crée les containers phpmyadmin et wordpress avec le volume pour conserver les données 
