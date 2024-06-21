@@ -1,4 +1,5 @@
 FROM debian
+ENV COMPOSER_ALLOW_SUPERUSER 1
 RUN apt update && apt upgrade -y 
 RUN apt update && apt install apache2 -y
 RUN apt update && apt install php -y
@@ -14,7 +15,7 @@ RUN git clone https://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@github.com/Saubin
 WORKDIR /var/www/html/site
 RUN chmod 777 -R /var/www/html/site
 RUN apt update && apt install php-curl -y
-#RUN composer.phar -n update && composer.phar -n install
+RUN composer.phar -n update && composer.phar -n install
 RUN apt update && apt install lynx -y
 RUN apt update && apt install nano -y
 COPY site.conf /etc/apache2/sites-available/site.conf
